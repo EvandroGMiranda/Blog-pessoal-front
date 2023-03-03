@@ -1,19 +1,25 @@
 import React from 'react';
-import { BrowserRouter as Router, Route,  } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Home from './paginas/home/Home';
 import './App.css';
-import { Grid } from "@material-ui/core"
 import Footer from './components/estaticos/footer/Footer';
 import Navbar from './components/estaticos/navbar/Navbar';
+import Login from './paginas/login/Login';
 
 
 function App() {
   return (
-    <>
+    <Router>
       <Navbar />
-      <Home />
+        <div style={{ minHeight: "100vh" }}>
+      <Routes>
+          <Route path="/" element={<Login />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/home" element={<Home />} />
+      </Routes>
+        </div>
       <Footer />
-    </>
+    </Router>
   );
 }
 
