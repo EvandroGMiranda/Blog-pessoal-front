@@ -18,13 +18,17 @@ function Navbar() {
                         <MenuIcon />
                     </IconButton>
                     <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
+                    <Link to="login" className='text-decorator-none'>
                     <Button color="inherit">inicio</Button>
+                    </Link>
                     </Typography>
                     <Typography  variant="h6" component="div" sx={{ flexGrow: 1 }}>
                     <Button color="inherit">tema</Button>
                     </Typography>
                     <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-                    <Button color="inherit">cadastrar tema</Button>
+                    <Link to="cadastrousuario" className='text-decorator-none'>
+                    <Button color="inherit">cadastro</Button>
+                    </Link>
                     </Typography>
                     <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
                     <Link to='/' className='text-decorator-none'>
