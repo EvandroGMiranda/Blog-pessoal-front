@@ -3,6 +3,7 @@ import './Home.css';
 import { Box } from '@mui/material';
 import { Grid, Typography, Button } from '@material-ui/core';
 import { Link } from 'react-router-dom';
+import TabPostagem from '../../components/postagens/tabPostagem/TabPostagem';
 
 
 function Home() {
@@ -28,9 +29,7 @@ return (
         <img className="img" src="https://imgur.com/tl9D4L8.png" alt="Logo Blog" width="400px" height="290px" />
         </Grid>
         <Grid xs={12} className='postagem'>
-
-
-
+            <TabPostagem/>
         </Grid>
 
     </Grid>
