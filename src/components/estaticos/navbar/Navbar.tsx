@@ -6,7 +6,7 @@ import "./Navbar.css";
 
 function Navbar() {
     return (
-        <Box sx={{ flexGrow: 1 }}>
+        <Box sx={{ flexGrow: 1 }} >
             <AppBar position="static" >
                 <Toolbar >
                     <IconButton
@@ -23,7 +23,14 @@ function Navbar() {
                     </Link>
                     </Typography>
                     <Typography  variant="h6" component="div" sx={{ flexGrow: 1 }}>
-                    <Button color="inherit">tema</Button>
+                    <Link to="Temas" className="text-decorator-none">
+                    <Button color="inherit">temas</Button>
+                    </Link>
+                    </Typography>                    
+                    <Typography  variant="h6" component="div" sx={{ flexGrow: 1 }}>
+                    <Link to="postagem" className='text-decorator-none'>
+                    <Button color="inherit">postagem</Button>
+                    </Link>
                     </Typography>
                     <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
                     <Link to="cadastrousuario" className='text-decorator-none'>
@@ -38,7 +45,6 @@ function Navbar() {
                 </Toolbar>
             </AppBar>
         </Box>
-
     );
 }
 
