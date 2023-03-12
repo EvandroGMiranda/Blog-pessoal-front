@@ -1,12 +1,11 @@
 import React, {useState, useEffect} from 'react'
-import { Link } from 'react-router-dom'
 import {Card, CardActions, CardContent, Button, Typography } from '@material-ui/core';
+import { Link,useNavigate} from 'react-router-dom'
 import {Box} from '@mui/material';
-import './ListaTema.css';
 import useLocalStorage from 'react-use-localstorage';
-import {useNavigate} from 'react-router-dom';
-import { busca } from '../../../services/Service';
+import './ListaTema.css';
 import Tema from '../../../models/Tema';
+import { busca } from '../../../services/Service';
 
 function ListaTema() {
 const [temas, setTemas] = useState<Tema[]>([])
@@ -22,7 +21,7 @@ useEffect(()=>{
 
 
 async function getTema(){
-    await busca("/tema", setTemas, {
+    await busca("/temas", setTemas, {
     headers: {
         'Authorization': token
     }
@@ -50,7 +49,6 @@ return (
         </CardContent>
         <CardActions>
             <Box display="flex" justifyContent="center" mb={1.5} >
-
             <Link to={`/formularioTema/${tema.id}`} className="text-decorator-none">
                 <Box mx={1}>
                 <Button variant="contained" className="marginLeft" size='small' color="primary" >
