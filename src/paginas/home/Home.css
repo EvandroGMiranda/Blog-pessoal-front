@@ -1,0 +1,30 @@
+.texto{
+    text-decoration: none;
+}
+
+.fundo{
+    background-color: rgb(155, 150, 150);
+}
+
+
+.titulo{
+    color:rgb(5, 5, 5) !important;
+    font-weight: bold !important; 
+}
+    
+
+.img{
+    width: 600px;
+
+    
+}
+
+.botao{
+    border-color: white !important;
+    background-color: black !important;
+    color: white !important; 
+}
+
+.postagem{
+    background-color: white;
+}
